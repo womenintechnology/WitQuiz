@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.witquiz.R;
+import com.example.witquiz.databasemanager.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loadControls();
+
+        setupDbEnv();
     }
 
     private void loadControls() {
@@ -48,5 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        DatabaseHelper.close();
+        super.onDestroy();
+    }
+
+    private void setupDbEnv() {
+        DatabaseHelper.setDatabaseManagerContext(this);
     }
 }
