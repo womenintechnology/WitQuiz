@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WitQuiz</string>
+    <string name="start">START</string>
+    <string name="username_hint">Nazwa użytkownika</string>
 </resources>

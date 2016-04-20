@@ -6,6 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:colorBackground">@drawable/background</item>
+        <item name="android:buttonStyle">@style/app_button</item>
+    </style>
+
+    <style name="app_button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">#ffb3b3</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">15dp</item>
     </style>
 
 </resources>
