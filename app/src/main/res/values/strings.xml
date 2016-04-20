@@ -2,4 +2,10 @@
     <string name="app_name">WitQuiz</string>
     <string name="start">START</string>
     <string name="username_hint">Nazwa użytkownika</string>
+    <string name="set_username">Wpisz nazwę użytkownika</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="new_game">Nowa gra</string>
+    <string name="best_scores">Najlepsze wyniki</string>
+    <string name="creator">Kreator</string>
+    <string name="exit">Wyjdź</string>
 </resources>

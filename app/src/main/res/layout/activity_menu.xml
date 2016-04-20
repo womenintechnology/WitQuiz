@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.witquiz.activities.MenuActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/new_game_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/best_scores"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/best_scores_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/creator"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/creator_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:id="@+id/exit_button"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
