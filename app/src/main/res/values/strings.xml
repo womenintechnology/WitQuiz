@@ -16,4 +16,8 @@
     <string name="do_you_want_to_delete_question">Czy na pewno chcesz usunąć to pytanie?</string>
     <string name="no_categories_to_edit">Brak kategorii do edycji</string>
     <string name="category_name">Nazwa kategorii</string>
+    <string name="category">Kategoria</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="add_new_question">Dodaj nowe</string>
+    <string name="questions">Pytania</string>
 </resources>

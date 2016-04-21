@@ -33,6 +33,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.witquiz.activities.MenuActivity" />
         </activity>
+        <activity
+            android:name=".activities.CategoryActivity"
+            android:label="@string/questions"
+            android:parentActivityName=".activities.CreatorActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.witquiz.activities.CreatorActivity" />
+        </activity>
     </application>
 
 </manifest>
