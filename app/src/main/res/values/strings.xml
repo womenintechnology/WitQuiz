@@ -8,4 +8,12 @@
     <string name="best_scores">Najlepsze wyniki</string>
     <string name="creator">Kreator</string>
     <string name="exit">Wyjdź</string>
+    <string name="edit_category">Edytuj kategorię</string>
+    <string name="add_new_category">Dodaj nową kategorię</string>
+    <string name="next">Dalej</string>
+    <string name="category_name_exists">Kategoria o tej nazwie już istnieje</string>
+    <string name="category_name_cannot_be_empty">Nazwa kategorii nie może byc pusta</string>
+    <string name="do_you_want_to_delete_question">Czy na pewno chcesz usunąć to pytanie?</string>
+    <string name="no_categories_to_edit">Brak kategorii do edycji</string>
+    <string name="category_name">Nazwa kategorii</string>
 </resources>
