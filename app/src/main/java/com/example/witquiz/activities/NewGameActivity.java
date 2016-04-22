@@ -83,7 +83,10 @@ public class NewGameActivity extends AppCompatActivity {
 
                 Question[] questions = DatabaseManager.getGameQuestionsForCategory(selectedCategory.getId());
 
-                // start game activity here
+                Intent intent = new Intent(NewGameActivity.this, GameActivity.class);
+                intent.putExtra("categoryName", selectedCategory.getName());
+                intent.putExtra("questions", questions);
+                startActivity(intent);
 
             }
         });
