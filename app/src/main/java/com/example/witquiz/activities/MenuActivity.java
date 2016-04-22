@@ -42,6 +42,15 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        exitButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
     }
 
 
