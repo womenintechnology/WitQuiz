@@ -1,5 +1,6 @@
 package com.example.witquiz.fragments;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import com.example.witquiz.entities.Question;
 
 public class GameFragment extends Fragment {
 
+    SendSummaryInterface mCallback;
     private TextView questionTextView;
     private ToggleButton[] answerButtons;
     TextView questionNrTextView;
@@ -32,6 +34,10 @@ public class GameFragment extends Fragment {
     String categoryName;
 
     public GameFragment() {
+    }
+
+    public interface SendSummaryInterface{
+        public void sendSummary(int allQuestions, int currentQuestion);
     }
 
     @Override
@@ -91,6 +97,26 @@ public class GameFragment extends Fragment {
         super.onSaveInstanceState(outState);
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (SendSummaryInterface) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        mCallback = null;
+        super.onDestroyView();
+    }
+
     private void loadControls(View view){
 
         TextView userNameTextView = (TextView) view.findViewById(R.id.username_name_textView);
@@ -112,6 +138,7 @@ public class GameFragment extends Fragment {
         answerButtons[2] = (ToggleButton) view.findViewById(R.id.c_answer_button);
         answerButtons[3] = (ToggleButton) view.findViewById(R.id.d_answer_button);
 
+        mCallback.sendSummary(questions.length, currentQuestionIndex);
         loadControlsText();
 
         for(int i = 0; i<4 ;++i){
@@ -208,6 +235,7 @@ public class GameFragment extends Fragment {
                         button.setBackground(getResources().getDrawable(R.drawable.question_button_selector));
                     }
 
+                    mCallback.sendSummary(questions.length, currentQuestionIndex);
                     loadControlsText();
                 }
 

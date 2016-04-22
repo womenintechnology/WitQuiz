@@ -10,8 +10,9 @@ import android.os.Bundle;
 
 import com.example.witquiz.R;
 import com.example.witquiz.fragments.GameFragment;
+import com.example.witquiz.fragments.SecondGameFragment;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity implements GameFragment.SendSummaryInterface {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
@@ -28,11 +29,20 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void sendSummary(int allQuestions, int currentQuestion) {
+        SecondGameFragment fragment = (SecondGameFragment) getSupportFragmentManager().findFragmentById(R.id.pager);
+
+        if(fragment != null)
+            fragment.setSummary(allQuestions, currentQuestion);
+    }
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         Bundle bundle;
 
         public final int POSITION_QUESTION = 0;
+        public final int POSITION_SUMMARY  = 1;
 
         public SectionsPagerAdapter(FragmentManager fm, Bundle bundle) {
             super(fm);
@@ -49,13 +59,20 @@ public class GameActivity extends AppCompatActivity {
                 fragment.setArguments(bundle);
 
                 return fragment;
+
             }
-            return null;
+            else { //if (position == POSITION_SUMMARY)
+                SecondGameFragment fragment = new SecondGameFragment();
+
+            fragment.setArguments(bundle);
+
+            return fragment;
+        }
         }
 
         @Override
         public int getCount() {
-            return 1;
+            return 2;
         }
 
         @Override
