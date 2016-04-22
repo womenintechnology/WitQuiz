@@ -36,19 +36,27 @@
         <activity
             android:name=".activities.CategoryActivity"
             android:label="@string/questions"
-            android:parentActivityName=".activities.CreatorActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.CreatorActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.witquiz.activities.CreatorActivity" />
         </activity>
         <activity
             android:name=".activities.EditQuestionActivity"
-            android:parentActivityName=".activities.CategoryActivity"
-            android:label="@string/question">
+            android:label="@string/question"
+            android:parentActivityName=".activities.CategoryActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.witquiz.activities.CategoryActivity" />
+        </activity>
+        <activity
+            android:name=".activities.NewGameActivity"
+            android:label="@string/new_game"
+            android:parentActivityName=".activities.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.witquiz.activities.MenuActivity" />
         </activity>
     </application>
 

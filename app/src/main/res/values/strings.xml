@@ -25,4 +25,7 @@
     <string name="delete_question">Usuń pytanie</string>
     <string name="OK">OK</string>
     <string name="no">Nie</string>
+    <string name="start_game">Rozpocznij grę</string>
+    <string name="no_categories_to_choose">Brak kategorii do wyboru. Dodaj nową kategorię.</string>
+    <string name="choose_category">Wybierz kategorię</string>
 </resources>
