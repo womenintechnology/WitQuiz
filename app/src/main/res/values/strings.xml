@@ -20,4 +20,9 @@
     <string name="title_activity_category">CategoryActivity</string>
     <string name="add_new_question">Dodaj nowe</string>
     <string name="questions">Pytania</string>
+    <string name="question">Pytanie</string>
+    <string name="save_question">Zapisz pytanie</string>
+    <string name="delete_question">Usuń pytanie</string>
+    <string name="OK">OK</string>
+    <string name="no">Nie</string>
 </resources>

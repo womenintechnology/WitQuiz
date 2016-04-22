@@ -1,6 +1,7 @@
 package com.example.witquiz.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -48,7 +49,10 @@ public class CategoryActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.add_new_question) {
 
-            // start new activity to add question
+            Intent intent = new Intent(CategoryActivity.this, EditQuestionActivity.class);
+            intent.putExtra("category", category);
+            startActivity(intent);
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -99,7 +103,10 @@ public class CategoryActivity extends AppCompatActivity {
 
                 Question selectedQuestion = DatabaseManager.getQuestionById((int) id);
 
-                // start new activity to edit question
+                Intent intent = new Intent(CategoryActivity.this, EditQuestionActivity.class);
+                intent.putExtra("question", selectedQuestion);
+                intent.putExtra("category", category);
+                startActivity(intent);
             }
 
         });
