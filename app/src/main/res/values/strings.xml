@@ -49,5 +49,8 @@
     <string name="game_summary">Statystyka</string>
     <string name="questions_answered">Pytań zaliczonych: %d</string>
     <string name="questions_left">Pytań do końca: %d</string>
+    <string name="number">Nr</string>
+    <string name="username_header">Użytkownik</string>
+    <string name="score">Wynik</string>
 
 </resources>

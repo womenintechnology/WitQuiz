@@ -51,6 +51,16 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        highScoresButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MenuActivity.this, BestScoresActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
